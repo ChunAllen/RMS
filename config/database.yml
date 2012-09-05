@@ -17,8 +17,8 @@ development:
   encoding: unicode
   database: rms_development
   pool: 5
-  username: rms
-  password:
+  username: postgres
+  password: admin
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,13 +43,13 @@ test:
   encoding: unicode
   database: rms_test
   pool: 5
-  username: rms
-  password:
+  username: postgres
+  password: admin
 
 production:
   adapter: postgresql
   encoding: unicode
   database: rms_production
   pool: 5
-  username: rms
-  password:
+  username: postgres
+  password: admin
