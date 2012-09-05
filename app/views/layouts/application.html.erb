@@ -10,11 +10,41 @@
 
 
 <%= render 'layouts/header'%>
-<div class="container">
-	<div class="row">
-    	<div class="span9"><%= yield %></div>
-	</div>
+
+<%if user_signed_in?%>
+    
+<div class="container-fluid">
+
+    <%= yield %>
+
 </div>
+
+<%else%>
+  
+
+<div class="container-fluid">
+
+<% flash.each do |name, msg| %>
+  <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+    <a class="close" data-dismiss="alert">×</a>
+    <%= msg %>
+  </div>
+
+<% end %>
+  <div class="row">
+    <div class="span9"> 
+    
+         <%= yield %>
+  
+    </div>
+  </div>
+</div>
+
+
+<%end%>
+
+
+
 
 </body>
 </html>
