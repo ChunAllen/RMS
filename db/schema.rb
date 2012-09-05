@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120905043649) do
+ActiveRecord::Schema.define(:version => 20120905053125) do
 
   create_table "homes", :force => true do |t|
     t.datetime "created_at", :null => false
