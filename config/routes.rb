@@ -2,7 +2,13 @@ Rms::Application.routes.draw do
   devise_for :users
 
 
-  resources :companies
+  resources :companies do
+    member do
+      get 'companyadmins'
+    end
+  end
+
+  match '/company_admins', :to => "companies#companyadmins"
 
   resources :restaurants
   
