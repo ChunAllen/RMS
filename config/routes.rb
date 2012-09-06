@@ -3,7 +3,14 @@ Rms::Application.routes.draw do
 
 
   resources :companies
+<<<<<<< HEAD
   resources :restaurants
+=======
+  
+
+  
+  root :to => 'companies#index'
+>>>>>>> d2e23fdba585961a721b911482b0bb6b4df76941
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -53,7 +60,7 @@ Rms::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'company#index'
+   
 
   # See how all your routes lay out with "rake routes"
 
