@@ -5,6 +5,4 @@
 
 $(document).ready ->
   $("#company").dataTable
-  
-
    

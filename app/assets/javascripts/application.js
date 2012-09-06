@@ -12,12 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require jquery.ui.all
 //= require jquery-ui
-//= require twitter/bootstrap
 //= require dataTables/jquery.dataTables
+
 //= require_tree .
+
 
 
 // MODALS
 $('#AddCompany').modal('show')
+
+
