@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+  	<%= render 'layouts/sidebar'%>
+
+    <div class="span8">
+	  <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name == :notice ? "success"  : "error" %>">
+          <a class="close" data-dismiss="alert">x</a>
+          <%= msg %>
+        </div>
+      <% end %>
+	  <div class="well row-fluid">	 	
+ 		<legend>
+ 			<h1>Restaurants</h1>
+ 		</legend>
+        <%= link_to 'Add New Restaurants', new_restaurant_path, :class => "btn btn-inverse" %>
+        <br/>
+        <br/>
+ 		<table class="table table-striped">
+ 		  <tr>
+ 		    <th>Name</th>
+ 		    <th>Company</th>
+ 		    <th>Contact Number</th>
+ 		    <th>Actions</th>
+ 		  </tr>
+ 		  <% @restaurants.each do |restaurant| %>
+            <tr>
+              <td><%= restaurant.name %></td> 
+              <td><%= restaurant.company_id %></td> 
+              <td><%= restaurant.landline %></td>
+              <td>
+                <%= link_to '', restaurant, :class => "icon-eye-open", :rel => "tooltip", :title => "Show" %>
+                <%= link_to '', edit_restaurant_path(restaurant), :class => "icon-edit", :rel => "tooltip", :title => "Edit"  %> 
+                <%= link_to '', restaurant, :confirm => 'Are you sure?', :method => :delete, :class => "icon-trash", :rel => "tooltip", :title => "Delete"  %> 
+              </td>
+            </tr>
+          <% end %>
+ 		</table>
+	  </div>
+	</div>
+  </div>
+</div>
