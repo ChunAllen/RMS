@@ -1,27 +1,27 @@
 <div class="span8">
   <div class="well row-fluid">
- 	
-  	<% if @showcompany.count > 0 %>
+  
+    <% if @showcompany.count > 0 %>
 
-  		<div class="hero-unit">
-  		
-  		<% @showcompany.each do |showcompany| %>
-		  <legend><h1><%= showcompany.name %></h1></legend>
-		  <p>
-		  	<%= showcompany.address + " " + showcompany.city%>
-		  	<%= showcompany.country%>
-		  </p>
-		   <p>
-		  	<%= showcompany.landline + "/" + showcompany.mobile + "/" + showcompany.fax %>
-		  </p>
-		  
-		  <p>
-			 <%= link_to 'Update Company', edit_company_path(showcompany), :class => "btn btn-inverse" %>	   
-		  </p>
-		<%end%>
+      <div class="hero-unit">
+      
+      <% @showcompany.each do |showcompany| %>
+      <legend><h1><%= showcompany.name %></h1></legend>
+      <p>
+        <%= showcompany.address + " " + showcompany.city%>
+        <%= showcompany.country%>
+      </p>
+       <p>
+        <%= showcompany.landline + "/" + showcompany.mobile + "/" + showcompany.fax %>
+      </p>
 
-		</div>
-    	
+      <p>
+       <%= link_to 'Update Company', edit_company_path(showcompany), :class => "btn btn-inverse" %>    
+      </p>
+    <%end%>
+
+    </div>
+      
     <%else%>
 
       <div class="hero-unit">
@@ -29,8 +29,8 @@
       <br/>
       <p>
          <%= link_to 'Add Company', new_company_path, :class => "btn btn-inverse" %>
-	  </p>
-	
+    </p>
+
     <%end%>
     
     </div>
