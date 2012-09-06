@@ -4,5 +4,6 @@
 
 
 $(document).ready ->
-  $("#company").dataTable
+  $("#companyAdmin").dataTable
    
+
