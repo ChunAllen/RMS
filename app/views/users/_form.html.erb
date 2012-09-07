@@ -1,6 +1,9 @@
 <%= simple_form_for @user do |f| %>
 
   <fieldset>
+  	<%= f.hidden_field :company_id %>
+  	<%= f.hidden_field :restaurant_id %>
+    <%= f.hidden_field :branch_id %>
     <%= f.input :first_name, :required=>true %>
     <%= f.input :last_name, :required=>true %>
     <%= f.input :email, :required=>true %>
