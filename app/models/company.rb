@@ -5,5 +5,5 @@ class Company < ActiveRecord::Base
   validates :address, :presence => true
   validates :city, :presence => true
   
-  # belongs_to :user
+  has_many :resturants
 end

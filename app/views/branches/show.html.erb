@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+  	<%= render 'layouts/sidebar'%>
+    <div class="span8">
+	  <div class="well row-fluid">	 	
+ 		<h2>View Information</h2>
+		<br>
+		<p>Name: <%= @branch.name %></p>
+		<p>Branch Address: <%= @branch.address %></p>
+		<p>Contact Number: <%= @branch.contact_number %></p>
+		<%= link_to 'Edit', edit_branch_path(@branch), :class => "btn btn-inverse" %> <%= link_to 'Back', branches_path, :class => "btn btn-inverse" %>
+	  </div>
+	</div>
+  </div>
+</div>

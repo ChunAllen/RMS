@@ -4,6 +4,7 @@ Rms::Application.routes.draw do
 
   resources :companies
   resources :restaurants
+  resources :branches
 
   # resources :company_users
   resources :users

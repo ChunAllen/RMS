@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+  	<%= render 'layouts/sidebar'%>
+
+    <div class="span8">
+	  <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name == :notice ? "success"  : "error" %>">
+          <a class="close" data-dismiss="alert">x</a>
+          <%= msg %>
+        </div>
+      <% end %>
+	  <div class="well row-fluid">	 	
+ 		<legend>
+ 			<h1>Branch</h1>
+ 		</legend>
+        <%= link_to 'Add New Branch', new_branch_path, :class => "btn btn-inverse" %>
+        <br/>
+        <br/>
+ 		<table class="table table-striped">
+ 		  <tr>
+ 		    <th>Name</th>
+ 		    <th>Restaurant</th>
+ 		    <th>Contact Number</th>
+ 		    <th>Actions</th>
+ 		  </tr>
+ 		  <% @branches.each do |branch| %>
+            <tr>
+              <td><%= branch.name %></td> 
+              <td><%= branch.restaurant.name %></td> 
+              <td><%= branch.contact_number %></td>
+              <td>
+                <%= link_to '', branch, :class => "icon-eye-open", :rel => "tooltip", :title => "Show" %>
+                <%= link_to '', edit_branch_path(branch), :class => "icon-edit", :rel => "tooltip", :title => "Edit"  %> 
+                <%= link_to '', branch, :confirm => 'Are you sure?', :method => :delete, :class => "icon-trash", :rel => "tooltip", :title => "Delete"  %> 
+              </td>
+            </tr>
+          <% end %>
+ 		</table>
+	  </div>
+	</div>
+  </div>
+</div>
