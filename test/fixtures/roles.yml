@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_id: 1
+  restaurant_id: 1
+  branch_id: 1
+  role_name: MyString
+
+two:
+  company_id: 1
+  restaurant_id: 1
+  branch_id: 1
+  role_name: MyString

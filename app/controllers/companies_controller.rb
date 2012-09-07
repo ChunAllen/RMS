@@ -45,6 +45,10 @@ class CompaniesController < ApplicationController
    	  end
 	end
 
+	def companyadmins
+		#@viewadmins =  
+	end
+
 
 
 end

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <%= render 'layouts/sidebar'%>
+  
+
+    <div class="span8">
+      <div class="well row-fluid">   
+    <legend><h2>Company Personnel</h2></legend>
+
+       <% flash.each do |name, msg| %>
+            <div class="alert alert-<%= name == :notice ? "success"  : "error" %>">
+              <a class="close" data-dismiss="alert">x</a>
+              <%= msg %>
+            </div>
+          <% end %>
+          <%= link_to 'Add Company Personnel',new_user_path,  :class => "btn btn-inverse" %>
+        <br/>
+        <br/>
+          <table class="table table-striped">
+                <tr>
+
+                  <th>Name</th>
+                  <th>Role Name</th>
+                  <th>Email</th>
+                  <th>Actions</th>
+                
+                </tr>
+                 
+                      <tr>
+                        <td></td> 
+                        <td></td> 
+                        <td></td>
+                        <td></td>
+                      </tr>
+                 
+          </table>
+    
+
+      </div>
+  </div>
+
+
+    
+  </div>
+</div>
+  </div>
+</div>

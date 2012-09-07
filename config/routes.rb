@@ -1,18 +1,12 @@
 Rms::Application.routes.draw do
   devise_for :users
-
-
-  resources :companies do
-    member do
-      get 'companyadmins'
-    end
-  end
-
-  match '/company_admins', :to => "companies#companyadmins"
-
-  resources :restaurants
-  
   root :to => 'companies#index'
+
+  resources :companies
+  resources :restaurants
+
+  # resources :company_users
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

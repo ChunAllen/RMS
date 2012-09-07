@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
    :confirmed_at, :confirmation_token, :confirmation_sent_at, :unconfirmed_email
 
   # attr_accessible :title, :body
+   # has_one :company
 end
