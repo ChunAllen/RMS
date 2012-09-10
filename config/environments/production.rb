@@ -25,7 +25,7 @@ Rms::Application.configure do
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,  
     :address              => "smtp.gmail.com",
-    :domain               => 'heroku.com'
+    :domain               => 'heroku.com',
     :port                 => 587,
     :user_name            => 'chun.allen07@gmail.com',
     :password             => 'SamplePassword',
