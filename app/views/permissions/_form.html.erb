@@ -1,0 +1,46 @@
+<table class="table table-striped">
+  <%= simple_form_for @permission do |f| %>
+  <tr>
+    <td colspan="2"><%= f.input :user_role_id, :collection => UserRole.all.map { |u| [u.name, u.id] }, :include_blank => false %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :company_module, "Set Company Permission"%></td>
+    <td>
+      <%= f.check_box :company_module %> Read 
+      <%= f.check_box :company_module %> Create 
+      <%= f.check_box :company_module %> Delete 
+      <%= f.check_box :company_module %> Update   
+    </td>
+  </tr>
+  <tr>
+    <td><%= f.label :restaurant_module, "Set Restaurant Permission"%></td>
+    <td>
+      <%= f.check_box :restaurant_module %> Read 
+      <%= f.check_box :restaurant_module %> Create 
+      <%= f.check_box :restaurant_module %> Delete 
+      <%= f.check_box :restaurant_module %> Update    
+    </td>
+  </tr>
+  <tr>
+    <td><%= f.label :branch_module, "Set Branch Permission"%></td>
+    <td>
+      <%= f.check_box :branch_module %> Read 
+      <%= f.check_box :branch_module %> Create 
+      <%= f.check_box :branch_module %> Delete 
+      <%= f.check_box :branch_module %> Update 
+    </td>
+  </tr>
+  <tr>
+    <td><%= f.label :role_module, "Set Roles Permission"%></td>
+    <td>
+      <%= f.check_box :role_module %> Read 
+      <%= f.check_box :role_module %> Create 
+      <%= f.check_box :role_module %> Delete 
+      <%= f.check_box :role_module %> Update 
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><%= f.button :submit, :class => "btn btn-inverse" %></td>
+  </tr>
+  <% end %>
+</table>

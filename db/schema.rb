@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120907075656) do
+ActiveRecord::Schema.define(:version => 20120909213128) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -46,6 +46,20 @@ ActiveRecord::Schema.define(:version => 20120907075656) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "permissions", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "user_role_id"
+    t.string   "company_module"
+    t.string   "restaurant_module"
+    t.string   "branch_module"
+    t.string   "role_module"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "permissions", ["company_id"], :name => "index_permissions_on_company_id"
+  add_index "permissions", ["user_role_id"], :name => "index_permissions_on_role_id"
+
   create_table "restaurants", :force => true do |t|
     t.string   "name"
     t.text     "main_address"
@@ -60,14 +74,15 @@ ActiveRecord::Schema.define(:version => 20120907075656) do
 
   add_index "restaurants", ["company_id"], :name => "index_restaurants_on_company_id"
 
-  create_table "roles", :force => true do |t|
+  create_table "user_roles", :force => true do |t|
+    t.string   "name"
     t.integer  "company_id"
-    t.integer  "restaurant_id"
-    t.integer  "branch_id"
-    t.string   "role_name"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
+
+  add_index "user_roles", ["company_id"], :name => "index_user_roles_on_company_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -88,6 +103,11 @@ ActiveRecord::Schema.define(:version => 20120907075656) do
     t.string   "confirmation_token"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.integer  "company_id"
+    t.string   "restaurant_id"
+    t.integer  "branch_id"
+    t.string   "roles_name"
+    t.string   "user_type"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

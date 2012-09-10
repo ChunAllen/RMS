@@ -1,0 +1,7 @@
+<%= simple_form_for @user_role do |f| %>
+  <fieldset>
+    <%= f.input :name %>	
+  </fieldset>
+  <%= f.button :submit, :class => "btn btn-inverse" %>
+  <%= link_to 'Back', user_roles_path, :class => "btn btn-inverse" %>
+<% end %>

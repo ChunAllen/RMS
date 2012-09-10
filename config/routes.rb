@@ -8,7 +8,8 @@ Rms::Application.routes.draw do
 
   # resources :company_users
   resources :users
-
+  resources :user_roles
+  resources :permissions
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

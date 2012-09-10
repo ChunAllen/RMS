@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+  	<%= render 'layouts/sidebar'%>
+
+    <div class="span8">
+	  <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name == :notice ? "success"  : "error" %>">
+          <a class="close" data-dismiss="alert">x</a>
+          <%= msg %>
+        </div>
+      <% end %>
+	  <div class="well row-fluid">	 	
+ 		<legend>
+ 			<h1>User Roles</h1>
+ 		</legend>
+        <%= link_to 'Add New User Roles', new_user_role_path, :class => "btn btn-inverse" %>
+        <br/>
+        <br/>
+ 		<table class="table table-striped">
+ 		  <tr>
+ 		    <th>Role Name</th>
+ 		    <th>Actions</th>
+ 		  </tr>
+ 		  <% @user_roles.each do |ur| %>
+            <tr>
+              <td><%= ur.name %></td>  
+              <td>
+                <%= link_to '', ur, :class => "icon-eye-open", :rel => "tooltip", :title => "Show" %>
+                <%= link_to '', edit_user_role_path(ur), :class => "icon-edit", :rel => "tooltip", :title => "Edit"  %> 
+                <%= link_to '', ur, :confirm => 'Are you sure?', :method => :delete, :class => "icon-trash", :rel => "tooltip", :title => "Delete"  %> 
+              </td>
+            </tr>
+          <% end %>
+ 		</table>
+	  </div>
+	</div>
+  </div>
+</div>
