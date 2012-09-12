@@ -16,25 +16,29 @@
         <%= link_to 'Add New Restaurants', new_restaurant_path, :class => "btn btn-inverse" %>
         <br/>
         <br/>
- 		<table class="table table-striped">
- 		  <tr>
- 		    <th>Name</th>
- 		    <th>Company</th>
- 		    <th>Contact Number</th>
- 		    <th>Actions</th>
- 		  </tr>
- 		  <% @restaurants.each do |restaurant| %>
-            <tr>
-              <td><%= restaurant.name %></td> 
-              <td><%= restaurant.company_id %></td> 
-              <td><%= restaurant.landline %></td>
-              <td>
-                <%= link_to '', restaurant, :class => "icon-eye-open", :rel => "tooltip", :title => "Show" %>
-                <%= link_to '', edit_restaurant_path(restaurant), :class => "icon-edit", :rel => "tooltip", :title => "Edit"  %> 
-                <%= link_to '', restaurant, :confirm => 'Are you sure?', :method => :delete, :class => "icon-trash", :rel => "tooltip", :title => "Delete"  %> 
-              </td>
-            </tr>
-          <% end %>
+ 		<table id="restaurant_table" cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" >
+ 		  <thead>
+        <tr>
+   		    <th>Name</th>
+   		    <th>Company</th>
+   		    <th>Contact Number</th>
+   		    <th>Actions</th>
+   		  </tr>
+      </thead>
+ 		  <tbody>
+        <% @restaurants.each do |restaurant| %>
+          <tr>
+            <td><%= restaurant.name %></td> 
+            <td><%= restaurant.company_id %></td> 
+            <td><%= restaurant.landline %></td>
+            <td>
+              <%= link_to '', restaurant, :class => "icon-eye-open", :rel => "tooltip", :title => "Show" %>
+              <%= link_to '', edit_restaurant_path(restaurant), :class => "icon-edit", :rel => "tooltip", :title => "Edit"  %> 
+              <%= link_to '', restaurant, :confirm => 'Are you sure?', :method => :delete, :class => "icon-trash", :rel => "tooltip", :title => "Delete"  %> 
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
  		</table>
 	  </div>
 	</div>

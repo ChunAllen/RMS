@@ -11,17 +11,14 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require jquery.ui.all
 //= require jquery-ui
 //= require dataTables/jquery.dataTables
+//= require twitter/bootstrap
 
 //= require_tree .
 
-
-
-// MODALS
-$('#AddCompany').modal('show')
 
 
