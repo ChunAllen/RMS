@@ -10,9 +10,9 @@ gem 'devise'
 gem 'simple_form'
 gem 'country_select'
 gem 'heroku'
-gem 'twitter-bootstrap-rails'
 gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 gem 'jquery-ui-rails'
+gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -1,0 +1,145 @@
+h2{color:white; padding-left:10px;}
+.top-header{
+	height:60px;
+	background-color:#000000;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.90);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.90);
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.90);
+	position:relative;
+	z-index:100;
+}
+.package-container{
+	height:93%;
+	width:100%;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.package-background{
+	background-position:top center;
+	background-repeat:no-repeat;
+	width:100%;
+	height:100%;
+	background-size:cover;
+}
+.package-text{
+	color:white;
+	font-size:15px;
+	font-weight:bold;
+	background:rgba(0, 0, 0, 0.8);
+	position:absolute;
+	left:0; 
+	width:100%; 
+	bottom:0; 
+	height:60px;
+	padding:5px;
+	line-height:16px;
+}
+/***********PACKAGE ITEM**********/
+.package-item{
+	display:block;
+	float:left;
+	cursor:pointer;
+	padding:0;
+	font-size:13px;
+	overflow:hidden;
+	background-color:#cccccc;
+	position:relative;
+}
+.tile-1x1{
+	width:200px;
+	height:200px;
+	margin-top:5px;
+	margin-left:5px;
+}
+.tile-2x1{
+	width:405px;
+	height:200px;
+	margin-top:5px;
+	margin-left:5px;
+}
+.tile-2x2{
+	width:405px;
+	height:405px;
+	margin-top:5px;
+	margin-left:5px;
+}
+.package-thumbnail-details{
+	position:absolute;
+	width:95%; 
+	font-size:12px;
+	padding:0px 2px 5px 0px;
+	bottom:0;
+	left:0;
+}
+.package-discount, .package-original-price, .package-price{
+	float:right;
+	margin-left:10px;
+}
+.package-price{
+	padding:2px;
+	background-color:#ffff00;
+	color:black;
+}
+.package-discount{
+	color:#ff8410;
+	font-size:15px;
+	font-weight:bold;
+}
+.package-original-price{
+	color:#999999;
+	text-decoration:line-through;
+}
+/*********************************/
+.login-window{
+	height:350px;
+	width:100%;
+	background:rgba(0, 0, 0, 0.8);
+	color:white;
+}
+
+#fliptrip-login{
+	display:none;
+	padding-top: 60px;
+	height: 280px;
+}
+
+#fliptrip-join{
+	display:none;
+	padding-top: 60px;
+	height: 350px;
+}
+
+#fliptrip-forgot{
+	display:none;
+	padding-top: 60px;
+	height: 250px;
+}
+
+.login-container{
+	padding:40px 20px 20px 20px;
+	margin-top:20px;
+	width:700px;
+	min-height:300px;
+	margin:0 auto;
+}
+ul.navigation-items{
+	float:right;
+	margin-top:10px;
+	padding-right:20px;
+}
+ul.navigation-items li{
+	float:left;
+	padding:10px;
+	margin-left:5px;
+	list-style:none;
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.text-label{
+    color:#e0e0e0;
+}
+input{
+	width:400px;
+}
