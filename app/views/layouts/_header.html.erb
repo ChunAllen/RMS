@@ -11,8 +11,7 @@
       	  </div> <!-- pull-right -->
    	  </div> <!-- span9 offset1 -->
     
-      <div class="span3 offset2">
-	  </div> <!-- span3 offset2 -->
+      
     
       <div class="span4">
             <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -48,9 +47,7 @@
         	</div> <!-- pull right -->
         </div> <!-- span9 offset1 -->
         
-        <div class="span3 offset2">
-        </div> <!-- span3 offset2 -->
-        
+       
         <div class="span4">      
                
             <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |x| %>
@@ -80,10 +77,7 @@
           </div> <!-- pull-right -->
         </div> <!-- span9 offset1 -->
 
-        <div class="span3 offset2">
-      
-        </div> <!-- span3 offset2 -->
-
+       
         <div class="span4">
             <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
               <div><%= f.email_field :email, :placeholder => "Email" %></div>
@@ -108,9 +102,7 @@
           </div> <!-- pull-right -->
         </div> <!-- span9 offset1 -->
 
-        <div class="span3 offset2">
       
-        </div> <!-- span3 offset2 -->
 
         <div class="span4">
             <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
@@ -127,7 +119,7 @@
 <div id="main-navbar" class="navbar">
    <div class="navbar-inner">
 			<div class="container-fluid">
-	 			 <%= link_to "RESTOBOT", root_path, :id => "logo" %>
+	 			 <%= link_to "RESTOBOT", root_path, :class=>"brand" %>
 	 		</div> <!-- container-fluid -->
 
 	 <div class="pull-right">

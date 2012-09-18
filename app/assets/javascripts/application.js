@@ -37,6 +37,7 @@ $(document).ready(function(){
       $("#fliptrip-join").slideUp("slow");
       $("#fliptrip-forgot").slideUp("slow"); 
       $("#fliptrip-login").slideDown("slow");
+      $("#fliptrip-confirm").slideUp("slow");
     }
 
     else {
