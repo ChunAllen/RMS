@@ -8,14 +8,18 @@
 </head>
 
 
- <% if user_signed_in? %> 
- <body>
-  <%= render "layouts/header2" %>
-  <%= yield %>
-</body>
- <% else %>
- <body style="padding-top: 0px;">
-  <%= render "layouts/header" %>
-  <%= yield %>
-</body>
+<% if user_signed_in? %> 
+
+  <body>
+      <%= render "layouts/header2" %>
+      <%= yield %>
+  </body>
+
+<% else %>
+
+  <body style="padding-top: 0px;">
+    <%= render "layouts/header" %>
+   <%= render "homes/hub" %>
+  </body>
+
 <% end %>

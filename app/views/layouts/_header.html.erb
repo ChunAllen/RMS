@@ -24,7 +24,11 @@
                           <font class="bulletleft">•</font>
                           <%= f.check_box :remember_me, :as => :boolean, :class => "left1" %><%= f.label :remember_me, :class => "left1" %>
                         <% end -%>
-                        <a href="javascript:{}" data-section="3" class="links tableft" id="forgot-button">Forgot your password?</a>                
+                       
+                        <a href="javascript:{}" data-section="4" class="links tableft" id="forgot-button">Forgot your password?</a>   
+                        <br/>
+                         <a href="javascript:{}" data-section="5" class="links tableft" id="confirm-button">Send me email confirmation</a>   
+
            		<% end %>
    			  </div> <!-- homeform-align -->
   		</div> <!-- span4 -->
@@ -63,6 +67,61 @@
     </div> <!-- container -->
 </section>
 <!-- END SIGN UP -->
+
+<!-- FORGOT PASSWORD -->
+<section class="slide" id="fliptrip-forgot" data-section="4" class="span12 login-window">
+      
+      <div class="container">
+
+        <div class="span9 offset1">
+            <h2>Forgot Password</h2>
+          <div class="pull-right">
+            <a href="javascript:{}" data-section="1" class="close-icon" id="hide-forgot-button">X</a>
+          </div> <!-- pull-right -->
+        </div> <!-- span9 offset1 -->
+
+        <div class="span3 offset2">
+      
+        </div> <!-- span3 offset2 -->
+
+        <div class="span4">
+            <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+              <div><%= f.email_field :email, :placeholder => "Email" %></div>
+
+              <div><%= f.submit "Send me reset password instructions" , :class => 'span4 btn btn-primary' %></div>
+            <% end %>
+        </div> <!-- span4 -->
+
+</section>
+<!-- END FORGOT PASSWORD -->
+
+
+
+<!-- CONFIRMATION EMAIL -->
+<section class="slide" id="fliptrip-confirm" data-section="5" class="span12 login-window">
+      <div class="container">
+
+        <div class="span9 offset1">
+            <h2>Confirm Email</h2>
+          <div class="pull-right">
+            <a href="javascript:{}" data-section="1" class="close-icon" id="hide-confirm-button">X</a>
+          </div> <!-- pull-right -->
+        </div> <!-- span9 offset1 -->
+
+        <div class="span3 offset2">
+      
+        </div> <!-- span3 offset2 -->
+
+        <div class="span4">
+            <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+              <div><%= f.email_field :email, :placeholder => "Email" %></div>
+              <div><%= f.submit "Send email confirmation" , :class => 'span4 btn btn-primary' %></div>
+            <% end %>
+        </div> <!-- span4 -->
+
+</section>
+<!-- END CONFIRMATION EMAIL -->
+
 
 
 <div id="main-navbar" class="navbar">

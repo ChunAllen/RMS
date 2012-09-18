@@ -21,51 +21,57 @@
 //= require_tree .
 
 
+
+
 $(document).ready(function(){
 
   $(window).ready(function() {
-  $("#flipbook").turn({
-    display: "single",
-    turnCorners: "tr"
+    $("#flipbook").turn({
+      display: "single",
+      turnCorners: "tr"
+    });
   });
-  });
-
-  $(window).bind('keydown', function(e){
-  if (e.keyCode==37)
-    $('#flipbook').turn('previous');
-  else if (e.keyCode==39)
-    $('#flipbook').turn('next');
-  });
-
-
 
   $("#login-button").click(function(){
     if ($("#fliptrip-login").is(":hidden")) {
       $("#fliptrip-join").slideUp("slow");
-      $("#fliptrip-forgot").slideUp("slow");
-      $("#fliptrip-login").slideDown("slow");} 
+      $("#fliptrip-forgot").slideUp("slow"); 
+      $("#fliptrip-login").slideDown("slow");
+    }
+
     else {
     $("#fliptrip-login").slideUp("slow");
     $("#fliptrip-join").hide();}
   });
 
+
+
   $("#hide-login-button").click(function(){
     $("#fliptrip-login").slideUp("slow");
   });
+
+
 
   $("#hide-join-button").click(function(){
     $("#fliptrip-join").slideUp("slow");
   });
 
+
   $("#hide-forgot-button").click(function(){
   $("#fliptrip-forgot").slideUp("slow");
   });
+
+  $("#hide-confirm-button").click(function(){
+  $("#fliptrip-confirm").slideUp("slow");
+  });
+
 
   $("#join-button").click(function(){
   if ($("#fliptrip-join").is(":hidden")) {
     $("#fliptrip-login").slideUp("slow");
     $("#fliptrip-forgot").slideUp("slow");
     $("#fliptrip-join").slideDown("slow");}
+
   else {
     $("#fliptrip-login").hide();
     $("#fliptrip-join").slideUp("slow");}
@@ -80,6 +86,18 @@ $(document).ready(function(){
     $("#fliptrip-login").hide();
     $("#fliptrip-join").hide();
     $("#fliptrip-forgot").slideUp("slow");}
+  });
+
+
+  $("#confirm-button").click(function(){
+  if ($("#fliptrip-confirm").is(":hidden")) {
+    $("#fliptrip-login").slideUp("slow");
+    $("#fliptrip-join").slideUp("slow");
+    $("#fliptrip-confirm").slideDown("slow");}
+  else {
+    $("#fliptrip-login").hide();
+    $("#fliptrip-join").hide();
+    $("#fliptrip-confirm").slideUp("slow");}
   });
   
  });
