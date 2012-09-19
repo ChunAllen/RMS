@@ -1,4 +1,55 @@
+body, html, #sub-menu-section, #content-section, #application-area{height:100%;}
+.clear-floats{clear:both;}
 
+/*structure*/
+.main-navigation-container{
+	padding-left:10px;
+	padding-right:10px;
+}
+#left-sub-menu{
+	position:absolute;
+	top:50px;
+	height: 100%;
+	left:0;
+	bottom:0;
+	width:220px;
+	padding:10px 0 70px 0;
+	background-color:#61B0E9;
+}
+ul.sidebar{
+	padding:0;
+	margin:0;
+}
+ul.sidebar li{
+	list-style:none;
+	width:220px;
+	padding:0;
+	margin:0;
+	position:relative;
+}
+ul.sidebar li a{
+	padding:10px 30px 10px 30px;
+	display:block;
+	color:white;
+}
+ul.sidebar li a:hover{
+	background-color:#6bbef6;
+	text-decoration:none;
+}
+ul.sidebar li.inactive div{
+	position:relative;
+	background-color:#61B0E9;
+	color:white;
+	
+}
+ul.sidebar li.active div{
+	position:relative;
+	background-color:white;
+}
+ul.sidebar li.active div a{
+	color:black;
+}
+/***********/
 
 .top-header{
 	height:60px;

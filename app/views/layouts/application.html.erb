@@ -11,15 +11,19 @@
 <% if user_signed_in? %> 
 
   <body>
+
       <%= render "layouts/header2" %>
       <%= yield %>
+
   </body>
 
 <% else %>
 
-  <body style="padding-top: 0px;">
+  <body style="padding-top: 0;">
     <%= render "layouts/header" %>
-   <%= render "homes/hub" %>
+    <div style="padding-top: 80px;">
+      <%= render "homes/hub" %>
+    </div>
   </body>
 
 <% end %>

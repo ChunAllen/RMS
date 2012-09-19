@@ -22,6 +22,7 @@
 
 
 
+ $('#EditRestaurant').modal('show');
 
 $(document).ready(function(){
 
@@ -39,7 +40,6 @@ $(document).ready(function(){
       $("#fliptrip-login").slideDown("slow");
       $("#fliptrip-confirm").slideUp("slow");
     }
-
     else {
     $("#fliptrip-login").slideUp("slow");
     $("#fliptrip-join").hide();}
@@ -71,12 +71,14 @@ $(document).ready(function(){
   if ($("#fliptrip-join").is(":hidden")) {
     $("#fliptrip-login").slideUp("slow");
     $("#fliptrip-forgot").slideUp("slow");
+    $("#fliptrip-confirm").slideUp("slow");
     $("#fliptrip-join").slideDown("slow");}
 
   else {
     $("#fliptrip-login").hide();
     $("#fliptrip-join").slideUp("slow");}
   });
+
 
   $("#forgot-button").click(function(){
   if ($("#fliptrip-forgot").is(":hidden")) {
@@ -100,11 +102,11 @@ $(document).ready(function(){
     $("#fliptrip-join").hide();
     $("#fliptrip-confirm").slideUp("slow");}
   });
+
   
  });
 
 
- $('#EditRestaurant').modal('show');
 
 
 $(document).ready(function(){

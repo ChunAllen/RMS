@@ -35,6 +35,10 @@
    </div> <!-- container -->
 </section>
 <!-- END SIGN IN -->
+
+
+
+
         
 
 <!-- SIGN UP -->        
@@ -116,19 +120,30 @@
 
 
 
-<div id="main-navbar" class="navbar">
-   <div class="navbar-inner">
-			<div class="container-fluid">
-	 			 <%= link_to "RESTOBOT", root_path, :class=>"brand" %>
-	 		</div> <!-- container-fluid -->
 
-	 <div class="pull-right">
-		<ul class="nav nav-pills">
-			<li><a href="javascript:{}" data-section="2" class="link-transit" id="join-button">Sign Up</a></li>
-			<li><a href="javascript:{}" data-section="3" class="link-transit" id="login-button">Login</a></li>
-	 	</ul>
-	 </div> <!-- pull-right -->	  
-   </div> <!-- navbar-inner -->
-</div><!-- end header -->
+
+
+
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <%= link_to "RESTOBOT", root_path, :id => "logo" %>
+         <div class="pull-right">
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li <% if current_page?(new_user_registration_path) %> class="active" <% end %> > <a href="javascript:{}" data-section="2" class="link-transit" id="join-button">Sign Up</a></li>
+              <li><a href="javascript:{}" data-section="3" class="link-transit" id="login-button">Login</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 

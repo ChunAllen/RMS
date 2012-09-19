@@ -1,14 +1,9 @@
 class CompaniesController < ApplicationController
 
 	def index
-	  if user_signed_in?
-	  	
+	 
 	  	@showcompany = Company.find(:all, :select => "id, name, address, address2, city, country, zip_code, landline, mobile, fax", :conditions => { :user_id => current_user.id }  )
-	  	
-	  else	
-	  	redirect_to new_user_session_path
-	
-	  end
+	 
 	end
     
 
