@@ -2,8 +2,19 @@
             <legend>Setup</legend>
             <ul class="sidebar">
                 
-                <li <% if current_page?(companies_path) %> class="active" <% end %> >
-                     <div class="sub-menu-item"><%= link_to "Organization", companies_path %>
+                <li 
+                <% if current_page?(companies_path) %> 
+                	class="active" 
+                <%elsif current_page?(setup_path)%>
+                	class="active" 
+                <%elsif current_page?(permissions_path)%>
+                	class="active"
+                 <%elsif current_page?(organization_path)%>
+                	class="active"	
+                		
+                <% end %>
+               	 >
+                     <div class="sub-menu-item"><%= link_to "Organization", organization_path %>
                 </li>
                 
                

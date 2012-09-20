@@ -11,4 +11,5 @@ Rms::Application.routes.draw do
   resources :permissions
 
   match '/setup', :to => "companies#index"
+  match '/organization', :to => "companies#index"
 end
