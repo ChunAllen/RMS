@@ -58,13 +58,13 @@ body, html, #sub-menu-section, #content-section, #application-area{height:100%;}
 	box-shadow: 0 0 5px 3px rgba(0,0,0,0.2);*/
 }
 #content{
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	position: absolute;
 	top: 0;
 	left: 220px;
 	right: 0;
-	width: 1000px;
-	/*min-width: 600px;*/
+	width: auto;
+	min-width: 600px;
 	margin: 0;
 	overflow-y: auto;
 	height: 90%;
@@ -115,6 +115,8 @@ ul.sidebar li.active div{
 ul.sidebar li.active div a{
 	color:#6f1139;
 } 
+
+
 
 /***********/
 /***********/
