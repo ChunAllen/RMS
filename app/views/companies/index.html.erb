@@ -20,7 +20,7 @@
 
 
 					          <% @companies.each do |c| %>
-					          <legend><h1><%= showcompany.name %></h1></legend>
+					          <legend><h1><%= c.name %></h1></legend>
 					          <p>
 					            <%= c.address + " " + c.city%>
 					            <%= c.country%>
