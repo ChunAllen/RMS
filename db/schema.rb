@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120920071056) do
+ActiveRecord::Schema.define(:version => 20120920085613) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -98,11 +98,9 @@ ActiveRecord::Schema.define(:version => 20120920071056) do
     t.string   "confirmation_token"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.integer  "company_id"
-    t.string   "restaurant_id"
-    t.integer  "branch_id"
-    t.string   "roles_name"
-    t.string   "user_type"
+    t.string   "mobile"
+    t.string   "username"
+    t.string   "status"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

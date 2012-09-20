@@ -13,7 +13,7 @@
 
       <div class="span4">
             <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-              <div><%= f.email_field :email, :placeholder => "Email" %></div>
+              <div><%= f.text_field :login, :placeholder => "Email or Username" %></div>
               <div><%= f.password_field :password , :placeholder => "Password" %></div>
               <div class="homeform-align">
                 <%= f.submit "Sign in", :class => 'span2 btn btn-primary'%>
