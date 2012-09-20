@@ -1,20 +1,29 @@
-<%= simple_form_for @company do |f| %>
-  <fieldset>
-    <%= f.input :name, :required=>true %>
-    <%= f.input :address, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Main Address"  %>
-    <%= f.input :address2, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Second Address" %>
-    <%= f.input :city %>
-    <%= f.label :country%>
-    <%= f.country_select :country%>
-    <%= f.input :zip_code %>
-    <%= f.input :landline %>
-    <%= f.input :mobile %>
-    <%= f.input :fax %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-  
-  </fieldset>
-  <%= f.button :submit, :class => "btn btn-inverse" %>
-  <%= link_to 'Back', companies_path, :class => "btn btn-inverse" %>
-<% end %>
+<div class="modal hide" id="Company">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Create a Company</h3>
+    
+  </div>
+  <div class="modal-body">
 
-<!-- id, name, address, address2, city, country, zip_code, landline, mobile, fax -->
+    <%= simple_form_for @company do |f| %>
+      <fieldset>
+        <%= f.input :name %>
+        <%= f.input :address, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Main Address"  %>
+        <%= f.input :address2, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Second Address" %>
+        <%= f.input :city %>
+        <%= f.label :country%>
+        <%= f.country_select :country%>
+        <%= f.input :zip_code %>
+        <%= f.input :landline %>
+        <%= f.input :mobile %>
+        <%= f.input :fax %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+      
+      </fieldset>
+      <%= f.button :submit, :class => "btn btn-primary" %>
+      <%= link_to 'Back', companies_path, :class => "btn" %>
+    <% end %>
+
+ </div>
+</div>

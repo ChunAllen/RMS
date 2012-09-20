@@ -21,9 +21,12 @@
 //= require_tree .
 
 
+//modals
+$('#Company').modal('show');
+//end of modals
 
- $('#EditRestaurant').modal('show');
 
+//sign up and login 
 $(document).ready(function(){
 
   $(window).ready(function() {
@@ -106,13 +109,5 @@ $(document).ready(function(){
   
  });
 
-
-
-
-$(document).ready(function(){
- 		openMyModal = function(restaurant){
- 		$('#restaurantId').html(restaurant);
-		$('#EditRestaurant').modal('show');
-	}
- });
+// end of signup and login
 

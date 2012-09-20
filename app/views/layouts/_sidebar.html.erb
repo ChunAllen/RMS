@@ -1,13 +1,13 @@
 <div id="sidebar-area" class="span2">
             <legend>Setup</legend>
             <ul class="sidebar">
-                <li class="active"><div class="sub-menu-item"><a href="#">Company</a></div></li>
-                <li class="inactive"><div class="sub-menu-item"><a href="#">Company</a></div></li>
-                <li class="inactive"><div class="sub-menu-item"><a href="#">Company</a></div></li>
-                <li class="inactive"><div class="sub-menu-item"><a href="#">Company</a></div></li>
-                <li class="inactive"><div class="sub-menu-item"><a href="#">Company</a></div></li>
-                <li class="inactive"><div class="sub-menu-item"><a href="#">Company</a></div></li>
-                <li class="inactive"><div class="sub-menu-item"><a href="#">Company</a></div></li>
-                <li class="inactive"><div class="sub-menu-item"><a href="#">Company</a></div></li>
+                
+                <li <% if current_page?(companies_path) %> class="active" <% end %> >
+                     <div class="sub-menu-item"><%= link_to "Organization", companies_path %>
+                </li>
+                
+               
+                
+                
             </ul>
 </div>

@@ -1,15 +1,12 @@
 class CompaniesController < ApplicationController
 
 	def index
-	 
-	  	@showcompany = Company.find(:all, :select => "id, name, address, address2, city, country, zip_code, landline, mobile, fax", :conditions => { :user_id => current_user.id }  )
-	 
+		@company = Company.new 
+	 	@companies = Company.find(:all, :conditions => { :user_id => current_user.id } )
 	end
     
 
-  def new
-  	@company = Company.new
-  end
+  
 
 	def create
 		@company = Company.new(params[:company])
@@ -39,10 +36,6 @@ class CompaniesController < ApplicationController
 	        format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
 	      end
    	  end
-	end
-
-	def companyadmins
-		#@viewadmins =  
 	end
 
 
