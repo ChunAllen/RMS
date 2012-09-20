@@ -1,0 +1,12 @@
+<%= simple_form_for @restaurant do |f| %>
+  <fieldset>
+    <%= f.input :name, :required=>true %>
+    <%= f.input :main_address, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Main Address"  %>
+    <%= f.input :main_address2, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Second Address" %>
+    <%= f.input :landline %>
+    <%= f.input :mobile %>
+    <%= f.input :fax %>		
+  </fieldset>
+  <%= f.button :submit, :class => "btn btn-inverse" %>
+  <%= link_to 'Back', restaurants_path, :class => "btn btn-inverse" %>
+<% end %>

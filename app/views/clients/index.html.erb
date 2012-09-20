@@ -8,18 +8,17 @@
      			<div class="span11">
 
 
-				  	 		<ul class="nav nav-tabs">
-							  <li><%= link_to "Company", clients_path %></li>
+				  	 <ul class="nav nav-tabs">
+							  <li class="active"><%= link_to "Company", clients_path %></li>
 							  <li><%= link_to "Brands" %></li>
-							  <li><%= link_to "Branches" %></li>
+							  <li><%= link_to "Branches"%></li>
 							  <li><%= link_to "Users" %></li>
-							  <li class="active"><%= link_to "Permissions", permissions_path %></li>
-							</ul>
+							  <li><%= link_to "Permissions", permissions_path%></li>
+					 </ul>
+
+				   		<%= render 'showcompany' %>	
+				   			
 				  
-
-
-					<%= render 'showPermission'%>
-
 
 				</div> <!-- END SPAN11 -->
 

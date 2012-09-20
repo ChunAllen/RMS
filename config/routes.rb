@@ -3,13 +3,13 @@ Rms::Application.routes.draw do
 
   root :to => 'homes#index'
 
-  resources :companies
-  resources :restaurants
+  resources :clients
+  resources :brands
   resources :branches
   resources :users
   resources :user_roles
   resources :permissions
 
-  match '/setup', :to => "companies#index"
-  match '/organization', :to => "companies#index"
+  match '/setup', :to => "clients#index"
+  match '/organization', :to => "clients#index"
 end
