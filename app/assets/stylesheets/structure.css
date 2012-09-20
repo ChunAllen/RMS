@@ -90,11 +90,11 @@ ul.sidebar li a{
 	font-weight:bold;
 }
 ul.sidebar li a:hover{
-	background-color:#f5a4c6;
+	background-color:#cde9f3;
 	text-decoration:none;
 }
 ul.sidebar li.active a:hover{
-	background-color:#f5a4c6;
+	background-color:#8FD5EE;
 	text-decoration:none;
 }
 ul.sidebar li.inactive div{
@@ -107,13 +107,13 @@ ul.sidebar li.active div{
 	background-color:whiteSmoke;
 	/*border-bottom:3px solid #cf6293;
 	border-top:3px solid #cf6293; */
-	border-left:5px solid #cf6293;
+	border-left:5px solid #0094c9;
 	/*-moz-box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -11px 8px -10px #ccc;
 	-webkit-box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -11px 8px -10px #ccc;	
 	box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -11px 8px -10px #ccc; */
 }
 ul.sidebar li.active div a{
-	color:#6f1139;
+	color:#0094c9;
 } 
 
 
