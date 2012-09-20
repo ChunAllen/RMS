@@ -1,39 +1,33 @@
-<div class="span8">
-  <div class="well row-fluid">
-  
-    <% if @showcompany.count > 0 %>
+<% if @companies.count > 0 %>
+   <div class="hero-unit">
+            
+            <% @companies.each do |c| %>   
+               <h1><%= c.name %></h1>
+                   
+                   <p>
+                    <%= c.address + " " + c.city%>
+                    <%= c.country%>
+                   </p>
+                   
+                   <p>
+                    <%= c.landline + "/" + c.mobile + "/" + c.fax %>
+                   </p>
 
-      <div class="hero-unit">
-      
-      <% @showcompany.each do |showcompany| %>
-      <legend><h1><%= showcompany.name %></h1></legend>
-      <p>
-        <%= showcompany.address + " " + showcompany.city%>
-        <%= showcompany.country%>
-      </p>
-       <p>
-        <%= showcompany.landline + "/" + showcompany.mobile + "/" + showcompany.fax %>
-      </p>
+                   <p>
+                     <%= link_to 'Edit Company', edit_company_path(c), :class => "btn btn-inverse" %>    
+                   </p>
+             <%end%>    
 
-      <p>
-         
-       <%= link_to 'Edit Company', edit_company_path(showcompany), :class => "btn btn-inverse" %>    
-      </p>
-    <%end%>
-
-    </div>
-      
-    <%else%>
-
-      <div class="hero-unit">
-      <h1>Create a Company</h1>
-      <br/>
-      <p>
-         <%= link_to 'Add Company', new_company_path, :class => "btn btn-inverse" %>
-    </p>
-
-    <%end%>
+      </div>  
     
-    </div>
-  </div>
-</div>
+
+
+<%else%>
+              <div class="hero-unit">
+              <h1>Create a Company</h1>
+              <br/>
+              <p>
+                  <%= render 'form' %>
+                 <button class="btn btn-primary" data-toggle="modal" href="#Company" >Create Company</button>
+              </p>
+<%end%>

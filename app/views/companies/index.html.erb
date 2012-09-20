@@ -14,36 +14,10 @@
 							  <li><%= link_to "Branches", companies_path %></li>
 							  <li><%= link_to "Users", companies_path %></li>
 							  <li><%= link_to "Permissions", permissions_path %></li>
-							</ul>
-				    <% if @companies.count > 0 %>
-					      <div class="hero-unit">
-
-
-					          <% @companies.each do |c| %>
-					          <legend><h1><%= c.name %></h1></legend>
-					          <p>
-					            <%= c.address + " " + c.city%>
-					            <%= c.country%>
-					          </p>
-					           <p>
-					            <%= c.landline + "/" + c.mobile + "/" + c.fax %>
-					          </p>
-
-					          <p>
-					             
-					           <%= link_to 'Edit Company', edit_company_path(c), :class => "btn btn-inverse" %>    
-					          </p>
-					        <%end%>
-					    </div>
-				    <%else%>
-				      <div class="hero-unit">
-				      <h1>Create a Company</h1>
-				      <br/>
-				      <p>
-				          <%= render 'form' %>
-				         <button class="btn btn-primary" data-toggle="modal" href="#Company" >Create Company</button>
-				      </p>
-				    <%end%>
+					 </ul>
+				   		
+				   		<%= render 'showCompany' %>	
+				   			
 				    </div>
 				  </div>
 				</div> <!-- END SPAN11 -->
