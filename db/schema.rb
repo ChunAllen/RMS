@@ -55,30 +55,6 @@ ActiveRecord::Schema.define(:version => 20120920085613) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "permissions", :force => true do |t|
-    t.integer  "company_id"
-    t.integer  "user_role_id"
-    t.string   "company_module"
-    t.string   "restaurant_module"
-    t.string   "branch_module"
-    t.string   "role_module"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
-  end
-
-  add_index "permissions", ["company_id"], :name => "index_permissions_on_company_id"
-  add_index "permissions", ["user_role_id"], :name => "index_permissions_on_role_id"
-
-  create_table "user_roles", :force => true do |t|
-    t.string   "name"
-    t.integer  "company_id"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "user_roles", ["company_id"], :name => "index_user_roles_on_company_id"
-
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false

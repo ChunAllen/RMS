@@ -1,4 +1,5 @@
 <% if @companies.count > 0 %>
+
   <div class="hero-unit">
            
            <% @companies.each do |c| %>   
@@ -13,9 +14,6 @@
                    <%= c.landline + "/" + c.mobile + "/" + c.fax %>
                   </p>
 
-                  <p>
-                    <%= link_to 'Edit Company', edit_company_path(c), :class => "btn btn-inverse" %>    
-                  </p>
             <%end%>    
 
      </div>  
