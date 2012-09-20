@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909213128) do
+ActiveRecord::Schema.define(:version => 20120920071056) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20120909213128) do
   end
 
   add_index "branches", ["restaurant_id"], :name => "index_branches_on_restaurant_id"
+
+  create_table "brands", :force => true do |t|
+    t.string   "name"
+    t.integer  "client_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "brands", ["client_id"], :name => "index_brands_on_client_id"
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -59,20 +68,6 @@ ActiveRecord::Schema.define(:version => 20120909213128) do
 
   add_index "permissions", ["company_id"], :name => "index_permissions_on_company_id"
   add_index "permissions", ["user_role_id"], :name => "index_permissions_on_role_id"
-
-  create_table "restaurants", :force => true do |t|
-    t.string   "name"
-    t.text     "main_address"
-    t.text     "main_address2"
-    t.string   "landline"
-    t.string   "mobile"
-    t.string   "fax"
-    t.integer  "company_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  add_index "restaurants", ["company_id"], :name => "index_restaurants_on_company_id"
 
   create_table "user_roles", :force => true do |t|
     t.string   "name"

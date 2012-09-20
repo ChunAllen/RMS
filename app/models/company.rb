@@ -6,4 +6,5 @@ class Company < ActiveRecord::Base
   validates :city, :presence => true
   
   has_many :resturants
+  has_many :brands
 end
