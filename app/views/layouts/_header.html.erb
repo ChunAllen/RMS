@@ -10,9 +10,7 @@
      
       	  </div> <!-- pull-right -->
    	  </div> <!-- span9 offset1 -->
-    
-      
-    
+
       <div class="span4">
             <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
               <div><%= f.email_field :email, :placeholder => "Email" %></div>
@@ -132,7 +130,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <%= link_to "RESTOBOT", root_path, :id => "logo" %>
+        <%= link_to "RESTOBOT", root_path, :class => "brand" %>
          <div class="pull-right">
           <div class="nav-collapse">
             <ul class="nav">
