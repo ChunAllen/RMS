@@ -1,6 +1,9 @@
 class BrandsController < ApplicationController
 
 	def index
+
+    # @showid = Client.find(:all, :conditions => { :user_id => current_user.id })
+    
     @brand = Brand.new
     @brands = Brand.order("created_at")
     respond_to do |format|

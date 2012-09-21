@@ -10,17 +10,7 @@
 
         <div class="nav-collapse">
           <ul class="nav">
-            <li
-             <% if current_page?(clients_path) %> 
-                  class="active" 
-             <%elsif current_page?(setup_path)%>
-                  class="active" 
-            <%elsif current_page?(setup_path)%>
-                  class="active"
-            <%elsif current_page?(permissions_path)%>
-                  class="active"      
-            <%end%>
-            ><%= link_to "Setup", setup_path, :class => "inventoryAnchor"  %></li>
+            <li><%= link_to "Setup", setup_path, :class => "inventoryAnchor"  %></li>
             <li><%= link_to "Inventory" %></li>
           </ul>
         </div>

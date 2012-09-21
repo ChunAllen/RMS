@@ -3,7 +3,11 @@ Rms::Application.routes.draw do
 
   root :to => 'homes#index'
 
-  resources :clients
+  resources :clients do 
+    resources :brands 
+  end
+
+
   resources :brands
   resources :branches
   resources :users

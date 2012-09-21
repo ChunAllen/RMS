@@ -23,6 +23,7 @@
 
 //modals
 $('#client').modal('show');
+$('#brand').modal('show');
 //end of modals
 
 
