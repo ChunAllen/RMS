@@ -24,6 +24,7 @@
 //modals
 $('#client').modal('show');
 $('#brand').modal('show');
+$('#clientEdit').modal('show');
 //end of modals
 
 

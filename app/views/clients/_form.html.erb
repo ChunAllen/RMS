@@ -8,18 +8,43 @@
 
     <%= simple_form_for @client do |f| %>
       <fieldset>
-
-        <%= f.input :name, :label => 'Client name' %>
         <%= f.label "Client Photo"%>
         <%= f.file_field :photo %>
+        <%= f.input :name, :label => 'Client name' %>
+        
         <%= f.hidden_field :user_id, :value => current_user.id %>
       </fieldset>
       <br/>
          <div class="modal-footer">
             <%= f.button :submit, :class => "btn btn-primary" %>
-            <%= link_to 'Back', clients_path, :class => "btn" %>
+            <button type="button" class="btn" data-dismiss="modal">Back</button>
         </div>
     <% end %>
+
+ </div>
+</div>
+
+<div class="modal hide fade" id="clientEdit">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Create a client</h3>
+    
+  </div>
+  <div class="modal-body">
+
+    <%= simple_form_for @client do |f| %>
+  <fieldset>
+    <%= f.label "Client Photo"%>
+    <%= f.file_field :photo %>  
+    <%= f.input :name, :label => 'Client name' %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  </fieldset>
+  <br/>
+     <div class="modal-footer">
+        <%= f.button :submit, :class => "btn btn-primary" %>
+        <button type="button" class="btn" data-dismiss="modal">Back</button>
+    </div>
+<% end %>
 
  </div>
 </div>
