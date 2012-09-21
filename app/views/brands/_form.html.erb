@@ -5,16 +5,19 @@
     
   </div>
   <div class="modal-body">
-
-       <%= simple_form_for @brand do |f| %>
+   <%= simple_form_for @brand do |f|%>
       <fieldset>
-        <%= f.input :name, :required=>true %>
-        <%= f.input :description, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Description" %>
-       
+        <%= f.input :name, :label => 'Brand Name' %>
+        <%= f.input :description, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Description"  %>
+        <%= f.hidden_field :client_id, :value=>  @showidClient.id %>
       </fieldset>
-          <%= f.button :submit, :class => "btn btn-primary" %>
-          <button type="button" class="btn btn" data-dismiss="modal">Cancel</button>
-        <% end %>
+      <br/>
+         <div class="modal-footer">
+            <%= f.button :submit, :class => "btn btn-primary" %>
+            <button type="button" class="btn" data-dismiss="modal">Back</button>
+        </div>
+   <%end%> 
+    
 
  </div>
 </div>

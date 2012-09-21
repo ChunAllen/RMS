@@ -1,15 +1,16 @@
 class BrandsController < ApplicationController
 
 	def index
-
-    # @showid = Client.find(:all, :conditions => { :user_id => current_user.id })
     
+    @showidClient = Client.find(:all, :conditions => { :user_id => current_user.id }).first
     @brand = Brand.new
     @brands = Brand.order("created_at")
+    
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.xml  { render :xml => @brands }
     end
+ 
   end
 
   def show

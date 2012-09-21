@@ -25,6 +25,7 @@
 $('#client').modal('show');
 $('#brand').modal('show');
 $('#clientEdit').modal('show');
+$("#clientEditBody").html(<%= escape_javascript render(:partial => 'clients/index')%>);
 //end of modals
 
 
