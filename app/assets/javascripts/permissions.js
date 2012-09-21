@@ -1,4 +1,4 @@
-//$(document).ready(function(){
+$(document).ready(function(){
     $("#draggable-section img").draggable({
 		appendTo:"body",
 		helper:"clone",
@@ -16,6 +16,6 @@
 	});
 	function deleteImage($item){
 		$(".set-permission-group").find('li').remove();
-		//$(this).remove();
+		// $(this).remove();
 	}
-//});
+});

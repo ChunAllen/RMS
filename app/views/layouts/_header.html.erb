@@ -55,6 +55,7 @@
             <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |x| %>
         			 <div><%= x.text_field :first_name, :placeholder => "First Name"  %></div>
         			 <div><%= x.text_field :last_name, :placeholder => "Last Name" %></div>
+              
         			 <div><%= x.email_field :email, :placeholder => "Email" %></div>
         			 <div><%= x.password_field :password, :placeholder => "Password"  %></div>
         		
@@ -100,7 +101,7 @@
         <div class="span9 offset1">
             <h2>Confirm Email</h2>
           <div class="pull-right">
-            <a href="javascript:{}" data-section="1" class="close-icon" id="hide-confirm-button">X</a>
+            <a href="javascript:{}" data-section="1" class="close-icon" id="hide-confirm-button"><%= image_tag "icons/close.png" %></a>
           </div> <!-- pull-right -->
         </div> <!-- span9 offset1 -->
 

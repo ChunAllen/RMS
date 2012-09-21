@@ -6,6 +6,17 @@ GIT
       jquery-rails
 
 GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: a16a50a106432091fff0bf0ac398066803bb8791
+  specs:
+    paperclip (3.2.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (>= 0.0.2)
+      mime-types
+
+GIT
   remote: http://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 33e73ca9f3fc9241dc164a2c18d90e5c1ccdb2a2
   specs:
@@ -51,6 +62,7 @@ GEM
     bootswatch-rails (0.0.12)
       railties (>= 3.1)
     builder (3.0.3)
+    cocaine (0.3.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -171,6 +183,7 @@ DEPENDENCIES
   jquery-datatables-rails!
   jquery-rails
   jquery-ui-rails
+  paperclip!
   pg
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
