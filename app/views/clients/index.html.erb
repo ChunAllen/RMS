@@ -9,25 +9,25 @@
 
 
 				  	 <ul class="nav nav-tabs">
-							  <li class="active"><%= link_to "Company", clients_path %></li>
+							  <li class="active"><%= link_to "Client", clients_path %></li>
 							  <li><%= link_to "Brands", brands_path %></li>
 							  <li><%= link_to "Branches"%></li>
 							  <li><%= link_to "Users" %></li>
 							  <li><%= link_to "Permissions", permissions_path%></li>
 					 </ul>
 					  
-						<div class="hero-unit">
+						
 							<% if @clients.count > 0 %>
-								<%= render 'showcompany' %>
+								<%= render 'showclient' %>
 							<%else%>
 								<%= render 'form' %>
 							   <h1>Create a Client</h1>
 									<p>Tagline</p>
 									<p>
-										<button class="btn btn-primary" data-toggle="modal" href="#client">Create Company</button>	
+										<button class="btn btn-primary" data-toggle="modal" href="#client">Create Client</button>	
 									</p>
 							<%end%>		
-						</div>  
+					
 
 					 	   	 
 				 
