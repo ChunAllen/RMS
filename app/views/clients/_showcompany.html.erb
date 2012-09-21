@@ -1,6 +1,10 @@
 <% @clients.each do |c| %>
 	<%= image_tag c.photo.url,:size=>"150x150" %>
 	<h1><%= c.name%></h1>
-
+	<%= link_to "Edit", edit_client_path(c.id), :data => {:toggle => "modal", :target => "#clientEdit"}, :class => "btn btn-info" %>
+	<%= link_to "Launch Modal", edit_client_path(c.id), :data => {:toggle => "modal", :href => "#clientEdit"} %>
+	<button href="/users/1" class="btn" data-toggle="modal" href="#clientEdit">Edit</button>
+	<button class="btn btn-primary" data-toggle="modal" href="#clientEdit">Create Company</button>
 <%end%>
 
+<%= render 'form' %>

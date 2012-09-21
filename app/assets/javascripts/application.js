@@ -23,6 +23,7 @@
 
 //modals
 $('#client').modal('show');
+$('#clientEdit').modal('show');
 //end of modals
 
 
