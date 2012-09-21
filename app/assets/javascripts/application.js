@@ -22,19 +22,19 @@
 
 
 //modals
-$('#Company').modal('show');
+$('#client').modal('show');
 //end of modals
 
 
 //sign up and login 
 $(document).ready(function(){
 
-  $(window).ready(function() {
-    $("#flipbook").turn({
-      display: "single",
-      turnCorners: "tr"
-    });
-  });
+  // $(window).ready(function() {
+  //   $("#flipbook").turn({
+  //     display: "single",
+  //     turnCorners: "tr"
+  //   });
+  // });
 
   $("#login-button").click(function(){
     if ($("#fliptrip-login").is(":hidden")) {

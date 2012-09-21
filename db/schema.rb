@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120920093921) do
+ActiveRecord::Schema.define(:version => 20120921070144) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
@@ -27,8 +27,13 @@ ActiveRecord::Schema.define(:version => 20120920093921) do
   create_table "brands", :force => true do |t|
     t.string   "name"
     t.integer  "client_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.text     "description"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "brands", ["client_id"], :name => "index_brands_on_client_id"
@@ -36,8 +41,13 @@ ActiveRecord::Schema.define(:version => 20120920093921) do
   create_table "clients", :force => true do |t|
     t.string   "name"
     t.string   "status"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.integer  "user_id"
   end
 
   create_table "homes", :force => true do |t|

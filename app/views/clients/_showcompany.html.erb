@@ -1,9 +1,6 @@
+<% @clients.each do |c| %>
+	<%= image_tag c.photo.url,:size=>"150x150" %>
+	<h1><%= c.name%></h1>
 
-
-<div class="hero-unit">
-           
-         
-</div>  
-   
-
+<%end%>
 

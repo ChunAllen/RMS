@@ -1,28 +1,24 @@
-<div class="modal hide" id="Company">
+<div class="modal hide fade" id="client">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Create a Company</h3>
+    <h3>Create a client</h3>
     
   </div>
   <div class="modal-body">
 
-    <%= simple_form_for @company do |f| %>
+    <%= simple_form_for @client do |f| %>
       <fieldset>
-        <%= f.input :name %>
-        <%= f.input :address, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Main Address"  %>
-        <%= f.input :address2, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Second Address" %>
-        <%= f.input :city %>
-        <%= f.label :country%>
-        <%= f.country_select :country%>
-        <%= f.input :zip_code %>
-        <%= f.input :landline %>
-        <%= f.input :mobile %>
-        <%= f.input :fax %>
+
+        <%= f.input :name, :label => 'Client name' %>
+        <%= f.label "Client Photo"%>
+        <%= f.file_field :photo %>
         <%= f.hidden_field :user_id, :value => current_user.id %>
-      
       </fieldset>
-      <%= f.button :submit, :class => "btn btn-primary" %>
-      <%= link_to 'Back', companies_path, :class => "btn" %>
+      <br/>
+         <div class="modal-footer">
+            <%= f.button :submit, :class => "btn btn-primary" %>
+            <%= link_to 'Back', clients_path, :class => "btn" %>
+        </div>
     <% end %>
 
  </div>

@@ -1,6 +1,7 @@
 class BrandsController < ApplicationController
 
 	def index
+    @brand = Brand.new
     @brands = Brand.order("created_at")
     respond_to do |format|
       format.html # index.html.erb
@@ -17,14 +18,7 @@ class BrandsController < ApplicationController
     end
   end
 
-  def new
-  	@brand = Brand.new
-
-  	respond_to do |format|
-  	  format.html #new.html.erb
-  	  format.xml { render :xml => @brand }	
-    end
-  end
+ 
 
   def edit
     @brand = Brand.find(params[:id])
