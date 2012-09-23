@@ -11,18 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120921070144) do
+ActiveRecord::Schema.define(:version => 20120923113010) do
 
   create_table "branches", :force => true do |t|
     t.string   "name"
-    t.string   "contact_number"
-    t.text     "address"
-    t.integer  "restaurant_id"
+    t.integer  "brand_id"
+    t.text     "address1"
+    t.text     "address2"
+    t.string   "city"
+    t.integer  "zip"
+    t.string   "province_state"
+    t.string   "country"
+    t.string   "status"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
-
-  add_index "branches", ["restaurant_id"], :name => "index_branches_on_restaurant_id"
 
   create_table "brands", :force => true do |t|
     t.string   "name"
