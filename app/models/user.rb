@@ -6,11 +6,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
    
   attr_accessible :email, :password, :password_confirmation, :remember_me,:first_name, :last_name,
-   :confirmed_at, :confirmation_token, :confirmation_sent_at, :unconfirmed_email, :mobile, :username, :status, :login,
-   :client_attributes
+   :confirmed_at, :confirmation_token, :confirmation_sent_at, :unconfirmed_email, :mobile, :username, :status, :login
   
   attr_accessor :login
-  accepts_nested_attributes_for :client
+  
  
   has_one :client
   #logging in using username
@@ -24,10 +23,7 @@ class User < ActiveRecord::Base
   end
 
  
-  def after_initialize
-    self.build_contact if self.contact.nil?
-  end
- 
+  
 
 
 end

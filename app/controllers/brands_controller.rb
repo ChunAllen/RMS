@@ -4,8 +4,8 @@ class BrandsController < ApplicationController
     @clients = Client.find(:all, :conditions => { :user_id => current_user.id } )
     @showidClient = Client.find(:all, :conditions => { :user_id => current_user.id }).first
     @brand = Brand.new
-    puts '<<<<'
-    @brands = Brand.joins(:client)
+    
+    @brands = Brand.all
     respond_to do |format|
       format.html 
       format.xml  { render :xml => @brands }
