@@ -22,10 +22,7 @@
 
 
 //modals
-$('#client').modal('show');
-$('#brand').modal('show');
-$('#clientEdit').modal('show');
-$('#branch').modal('show');
+
 //end of modals
 
 

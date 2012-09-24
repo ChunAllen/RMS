@@ -3,5 +3,6 @@ class Brand < ActiveRecord::Base
   :photo_file_size,:photo_updated_at,:photo
   
   belongs_to :client
+  has_many :branches
   
 end

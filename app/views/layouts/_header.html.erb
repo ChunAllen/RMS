@@ -59,7 +59,11 @@
               
         			 <div><%= x.email_field :email, :placeholder => "Email" %></div>
         			 <div><%= x.password_field :password, :placeholder => "Password"  %></div>
-        		
+
+        		   <%= x.fields_for :client do |c| %>
+                  <%= c.text_field :name %>
+               <% end %>
+
         		 <div class="homeform-align">
         		 	<%= x.submit "Sign Up", :class => 'span2 btn btn-primary'%>
         		</div>
