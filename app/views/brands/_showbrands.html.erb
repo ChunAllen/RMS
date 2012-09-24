@@ -24,7 +24,7 @@
 	      	<ul class="set-permission-group">
 	      		<button class="btn btn-primary" data-toggle="modal" href=<%= "#branch" + b.id.to_s %> >Create Branch</button>	
 
-	      		<table id="table" class="display">
+	      		<table id="tables" class="display">
 			  	<thead>
 			    	<tr>
 				      	<th>Branch Name</th>
@@ -51,6 +51,7 @@
       	<% @brandid = b.id %>
       	<% @modalId = "branch" + b.id.to_s %>
 		<%= render :template => "branches/_form" %>
+		
 
      <%end%>
 </div>

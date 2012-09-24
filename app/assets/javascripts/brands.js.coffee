@@ -4,8 +4,6 @@
 
 
 jQuery ->
-  $('#branch1').dataTable
-  
-    sDom: "C<\"clear\">lfrtip"
+  $('#tables').dataTable
     sPaginationType: "full_numbers"
     bJQueryUI: true
