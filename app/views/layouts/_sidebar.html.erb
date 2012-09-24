@@ -10,6 +10,10 @@
                 	class="active"
                 <%elsif current_page?(organization_path)%>
                 	class="active"	
+                <%elsif current_page?(branches_path)%>
+                    class="active"  
+                <%elsif current_page?(brands_path)%>
+                    class="active"  
                 <% end %>
             >
                 <div class="sub-menu-item"><%= link_to "Organization", organization_path %>

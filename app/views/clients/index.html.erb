@@ -8,24 +8,20 @@
      			<div class="span11">
 
 
-				  	 <ul class="nav nav-tabs">
-							  <li class="active"><%= link_to "Client", clients_path %></li>
-							  <li><%= link_to "Brands", brands_path %></li>
-							  <li><%= link_to "Branches"%></li>
-							  <li><%= link_to "Users" %></li>
-							  <li><%= link_to "Permissions", permissions_path%></li>
-					 </ul>
+				  	 		 <%= render 'layouts/setuptabs'%>
 					  
 						
 							<% if @clients.count > 0 %>
 								<%= render 'showclient' %>
 							<%else%>
+							<div class="hero-unit">
 								<%= render 'form' %>
 							   <h1>Create a Client</h1>
-									<p>Tagline</p>
+									<p>Establish your company</p>
 									<p>
 										<button class="btn btn-primary" data-toggle="modal" href="#client">Create Client</button>	
 									</p>
+							</div>
 							<%end%>		
 					
 

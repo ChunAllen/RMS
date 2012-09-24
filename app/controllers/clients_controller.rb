@@ -3,7 +3,7 @@ class ClientsController < ApplicationController
 
 	def index
 		@client = Client.new 
-	 	@clients = Client.find(:all, :conditions => { :user_id => current_user.id } )
+	 	@clients = Client.joins(:user)
 	end
     
 

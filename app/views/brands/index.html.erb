@@ -8,20 +8,21 @@
           <div class="span11">
 
 
-             <ul class="nav nav-tabs">
-                <li><%= link_to "Company", clients_path %></li>
-                <li  class="active"><%= link_to "Brands", brands_path %></li>
-                <li><%= link_to "Branches"%></li>
-                <li><%= link_to "Users" %></li>
-                <li><%= link_to "Permissions", permissions_path%></li>
-           </ul>
+           <%= render 'layouts/setuptabs'%>
             
             <div class="hero-unit">
+              <% if @clients.count > 0 %>
                 <%= render 'form' %>
                 <button class="btn btn-primary" data-toggle="modal" href="#brand">Create a Brand</button>  
               <br/>
                 <%= render 'showbrands' %>
-              
+              <%else%>
+                 <h1>Cannot create a brand</h1>
+                  <p>You need to create a client.</p>
+                  <p>
+                    <%= link_to "Create a client", clients_path, :class => "btn btn-info"%>
+                  </p>
+              <%end%>
             </div>  
 
                  

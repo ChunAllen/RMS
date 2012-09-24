@@ -1,0 +1,22 @@
+  <ul class="nav nav-tabs">
+                <li
+                	<% if current_page?(clients_path) %> 
+                    	class="active"  
+                    <%end%> 
+                    ><%= link_to "Company", clients_path %></li>
+                <li
+                	<%if current_page?(brands_path) %> 
+                    	class="active"  
+                    	<%end%>
+                      ><%= link_to "Brands", brands_path %></li>
+                <li
+                	<%if current_page?(branches_path) %> 
+                    	class="active"  
+                    	<%end%>
+                	  ><%= link_to "Branches", branches_path%></li>
+                <li
+                	<%if current_page?(permissions_path) %> 
+                    	class="active"  
+                    	<%end%>
+                	  ><%= link_to "Permissions", permissions_path%></li>
+  </ul>

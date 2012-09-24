@@ -1,10 +1,29 @@
-<%= simple_form_for @branch do |f| %>
-  <fieldset>
-    <%= f.input :name, :required=>true %>
-    <%= f.input :restaurant_id, :collection => Restaurant.all.map { |u| [u.name, u.id] }, :include_blank => false %>
-    <%= f.input :address, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Branch Address"  %>
-    <%= f.input :contact_number %>
-  </fieldset>
-  <%= f.button :submit, :class => "btn btn-inverse" %>
-  <%= link_to 'Back', branches_path, :class => "btn btn-inverse" %>
-<% end %>
+<div class="modal hide fade" id="branch">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Create a branch</h3>
+    
+  </div>
+  <div class="modal-body">
+   <%= simple_form_for @branch do |f|%>
+      <fieldset>
+        <%= f.input :brand_id, :collection => @showBrands.map {|b| [b.name, b.id] },  :include_blank => false%>
+        <%= f.input :name, :label => 'Branch Name' %>
+        <%= f.input :address1, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Primary Address"  %>
+        <%= f.input :address2, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Secondary Address"  %>
+        <%= f.label :country %>
+        <%= f.country_select :country%>
+        <%= f.input :zip, :label => 'Zip Code' %>
+        <%= f.input :province_state, :label => 'Province/State' %>
+      </fieldset>
+      <br/>
+         <div class="modal-footer">
+            <%= f.button :submit, :class => "btn btn-primary" %>
+            <button type="button" class="btn" data-dismiss="modal">Back</button>
+        </div>
+   <%end%> 
+
+  
+
+ </div>
+</div>

@@ -1,11 +1,11 @@
 class BrandsController < ApplicationController
 
 	def index
-    
+    @clients = Client.find(:all, :conditions => { :user_id => current_user.id } )
     @showidClient = Client.find(:all, :conditions => { :user_id => current_user.id }).first
     @brand = Brand.new
-    @brands = Brand.order("created_at")
-    
+    puts '<<<<'
+    @brands = Brand.joins(:client)
     respond_to do |format|
       format.html 
       format.xml  { render :xml => @brands }

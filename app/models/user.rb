@@ -18,5 +18,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me,:first_name, :last_name,
    :confirmed_at, :confirmation_token, :confirmation_sent_at, :unconfirmed_email, :mobile, :username, :status, :login
 
+  has_one :client
 
 end
