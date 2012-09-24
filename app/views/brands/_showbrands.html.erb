@@ -33,8 +33,7 @@
       	<div class="clear-floats"></div></div>
      
       	<% @brandid = b.id %>
-      <h1>	<%= @brandid %></h1>
-      		<% @modalId = "branch" %>
+      	<% @modalId = "branch" + b.id.to_s %>
 		<%= render :template => "branches/_form" %>
      <%end%>
 </div>

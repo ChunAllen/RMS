@@ -22,16 +22,12 @@ class User < ActiveRecord::Base
       end
   end
 
-<<<<<<< HEAD
+
   attr_accessible :email, :password, :password_confirmation, :remember_me,:first_name, :last_name,
    :confirmed_at, :confirmation_token, :confirmation_sent_at, :unconfirmed_email, :mobile, :username, :status, :login
   
   has_many :clients
   accepts_nested_attributes_for :clients
  
-=======
- 
-
->>>>>>> 39943ecb0ae90b96430903496e5f1f60e6c3b59e
 
 end
