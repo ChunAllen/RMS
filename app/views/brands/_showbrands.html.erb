@@ -4,7 +4,11 @@
      <% @brands.each do |b| %>
      
      	<table>
-     		<tr><td width="750">
+     		<tr>
+     			<td>
+	     			<%= image_tag b.photo.url %>
+	     		</td>
+     			<td width="750">
 	     			<h2><%= b.name %>&nbsp;<%= b.id %></h2>
 	     		</td>
 	     		<td>
@@ -22,29 +26,21 @@
 	    <p><%= b.description %></p>
 	    <div class="droppable-area">
 	      	<ul class="set-permission-group">
-	      		<button class="btn btn-primary" data-toggle="modal" href=<%= "#branch" + b.id.to_s %> >Create Branch</button>	
-
-	      		<table id="tables" class="display">
-			  	<thead>
-			    	<tr>
-				      	<th>Branch Name</th>
-				      	<th>Address</th>
-				      	<th>Location</th>
-				     	<th>Number</th>
-				     	<th>Action</th>
-			   		</tr>
-			  	</thead>
-			  	<tbody>
-			  		<tr>
-			  			<td>a</td>
-			  			<td>b</td>
-			  			<td>c</td>
-			  			<td>d</td>
-			  			<td>e</td>
-			  		</tr>
-			  	</tbody>
-				</table>
+	      		<table border="1">
+	      			<tr>
+	      				<% @showBranches.each do |sb|%>
+			      		 	<% if sb.brand_id == b.id %>
+			      		 		<td>
+									<%= sb.name %>
+								</td>
+							<%end%>
+	      				<%end%>
+	      			</tr>
+	      		</table>
 				
+				<%= link_to "", :data => {:toggle => "modal", :target => "#branch" + b.id.to_s } do %>
+						<%= image_tag("/assets/icons/add.png")%>
+				<%end%>
 	      	</ul>
       	<div class="clear-floats"></div></div>
      

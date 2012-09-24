@@ -1,7 +1,7 @@
 <div class="hero-unit">
 	 <% @clients.each do |c| %>
      
-     <h2><%= c.name%></h2>
+     <%= image_tag c.photo.url %><h2><%= c.name%></h2>
      
      <p><%= c.description %></p>
      <div class="droppable-area">

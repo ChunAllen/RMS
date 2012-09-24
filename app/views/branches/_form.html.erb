@@ -7,7 +7,8 @@
   <div class="modal-body">
    <%= simple_form_for @branch do |f|%>
       <fieldset>
-        <%= @brandid %>
+        <%= f.label "Branches logo "%>
+        <%= f.file_field :photo %>
         <%= f.hidden_field :brand_id, :value => @brandid %>
         <%= f.input :name, :label => 'Branch Name' %>
         <%= f.input :address1, :as => :text, :input_html => { :rows => 3, :cols => 25, :class => 'resizable' }, :label => "Primary Address"  %>
