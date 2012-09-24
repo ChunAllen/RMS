@@ -6,6 +6,10 @@ class ClientsController < ApplicationController
 	 	@clients = Client.joins(:user)
 	end
     
+	def new
+		@client = Client.new 
+	end
+
 
   
 
