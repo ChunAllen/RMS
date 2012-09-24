@@ -1,6 +1,6 @@
  <div class="brand-level">
 
- 	 	<% @brandid = "" %>
+ 	 <% @brandid = "" %>
      <% @brands.each do |b| %>
      	<table>
      		<tr><td width="750">
@@ -21,8 +21,7 @@
 	    <p><%= b.description %></p>
 	    <div class="droppable-area">
 	      	<ul class="set-permission-group">
-	      		<%= link_to "Add a Branch","#branch" + b.id.to_s, :data => {:toggle=>"modal"},
-:class=>"btn btn-info"%>
+	      		<button class="btn btn-primary" data-toggle="modal" href=<%= "#branch" + b.id.to_s %> >Create Branch</button>	
 	      		<table>
 	      			<tr>
 	      				<td>
@@ -35,5 +34,6 @@
       	<% @brandid = b.id %>
       	<% @modalId = "branch" + b.id.to_s %>
 		<%= render :template => "branches/_form" %>
+
      <%end%>
 </div>

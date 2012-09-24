@@ -3,7 +3,7 @@ class ClientsController < ApplicationController
 
 	def index
 		@client = Client.new 
-	 	@clients = Client.joins(:user)
+	 	@clients = Client.all
 	end
     
 	def new

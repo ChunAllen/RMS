@@ -1,7 +1,9 @@
   <ul class="nav nav-tabs">
                 <li
-                	<% if current_page?(clients_path) %> 
-                    	class="active"  
+                	<% if current_page?(clients_path) %> 	
+                        class="active"  
+                    <% elsif current_page?(setup_path) %>     
+                        class="active"  
                     <%end%> 
                     ><%= link_to "Company", clients_path %></li>
                 <li
