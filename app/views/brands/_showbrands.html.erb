@@ -19,21 +19,11 @@
      	</table>
 	     
 	    <p><%= b.description %></p>
-	    <div class="droppable-area">
-	      	<ul class="set-permission-group">
-	      		<button class="btn btn-primary" data-toggle="modal" href=<%= "#branch" + b.id.to_s %> >Create Branch</button>	
-	      		<table>
-	      			<tr>
-	      				<td>
-	      				</td>
-	      			</tr>
-	      		</table>
-	      	</ul>
-      	<div class="clear-floats"></div></div>
-     
+
       	<% @brandid = b.id %>
       	<% @modalId = "branch" + b.id.to_s %>
 		<%= render :template => "branches/_form" %>
+		
 
      <%end%>
 </div>
