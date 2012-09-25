@@ -3,15 +3,9 @@ class BrandsController < ApplicationController
 	def index
     @clients = Client.find(:all, :conditions => { :user_id => current_user.id } )
     @showidClient = Client.find(:all, :conditions => { :user_id => current_user.id }).first
-    
     @brand = Brand.new
     @brands = Brand.all
-
-    puts '>>>>>>'
     @showBranches = Branch.all
-   # SELECT "brands".name, "branches".name FROM "brands" INNER JOIN "branches" ON "branches"."brand_id" = "brands"."id"  
-
-
     @branch = Branch.new
     
     respond_to do |format|

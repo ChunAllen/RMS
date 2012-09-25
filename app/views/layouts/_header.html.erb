@@ -46,29 +46,10 @@
         
        
         <div class="span4">      
-<<<<<<< HEAD
-               
-            <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |x| %>
-        			 
-               <div><%= x.text_field :first_name, :placeholder => "First Name"  %></div>
-        			 <div><%= x.text_field :last_name, :placeholder => "Last Name" %></div>
-              
-        			 <div><%= x.email_field :email, :placeholder => "Email" %></div>
-        			 <div><%= x.password_field :password, :placeholder => "Password"  %></div>
 
-        		   <%= x.fields_for :client do |c| %>
-                  <%= c.text_field :name %>
-               <% end %>
-
-        		 <div class="homeform-align">
-        		 	<%= x.submit "Sign Up", :class => 'span2 btn btn-primary'%>
-        		</div>
-        	<%end%>
-=======
-           
            <%= render :template => 'devise/registrations/new'%>
 
->>>>>>> 39943ecb0ae90b96430903496e5f1f60e6c3b59e
+
         </div> <!-- span4 -->
     </div> <!-- container -->
 </section>
