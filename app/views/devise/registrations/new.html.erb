@@ -6,13 +6,12 @@
 
    <div><%= f.text_field :last_name, :placeholder => "Last Name"  %></div>
 
-<<<<<<< HEAD
- 
-=======
-  <div><%= f.email_field :email , :placeholder => "Email" %></div>
+    <div><%= f.text_field :username , :placeholder => "Username" %></div>
+ 	
+ 	<div><%= f.email_field :email , :placeholder => "Email" %></div>
 
-  <div><%= f.password_field :password, :placeholder => "Password" %></div>
->>>>>>> 39943ecb0ae90b96430903496e5f1f60e6c3b59e
+  	<div><%= f.password_field :password, :placeholder => "Password" %></div>
+
 
   <div><%= f.submit "Sign up", :class => "btn btn-primary" %></div>
 <% end %>

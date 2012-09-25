@@ -25,11 +25,7 @@
 $('#client').modal('show');
 $('#brand').modal('show');
 $('#clientEdit').modal('show');
-<<<<<<< HEAD
 $('#branch').modal('show');
-=======
-$('#branch').modal('show'); 
->>>>>>> d1d9136a04cae5dcf995f1dc5334c39a40a13487
 //end of modals
 
 

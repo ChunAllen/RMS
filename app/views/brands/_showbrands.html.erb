@@ -26,17 +26,16 @@
 	    <p><%= b.description %></p>
 	    <div class="droppable-area">
 	      	<ul class="set-permission-group">
-	      		<table border="1">
-	      			<tr>
+	      		
 	      				<% @showBranches.each do |sb|%>
 			      		 	<% if sb.brand_id == b.id %>
-			      		 		<td>
+			    
 									<%= sb.name %>
-								</td>
+				
 							<%end%>
 	      				<%end%>
-	      			</tr>
-	      		</table>
+	      		
+	      		
 				
 				<%= link_to "", :data => {:toggle => "modal", :target => "#branch" + b.id.to_s } do %>
 						<%= image_tag("/assets/icons/add.png")%>
